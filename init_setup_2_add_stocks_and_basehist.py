@@ -64,7 +64,6 @@ with conn:
     assets = api.list_assets()
     curr_symbols = [asset.symbol for asset in assets]
 
-
     #chunk_size = 10
     #for i in range(0, len(curr_symbols), chunk_size):
     #    symbol_chunk = curr_symbols[i:i+chunk_size]
@@ -166,7 +165,7 @@ with conn:
                 ###################################################
                 today_ago = datetime.now(timezone.utc) - timedelta(days=270)
                 hist_start = today_ago
-                k = 4
+                k = 3
 
                 p5 = c.get_price_history_every_five_minutes(asset.symbol,
                     need_extended_hours_data=True,
