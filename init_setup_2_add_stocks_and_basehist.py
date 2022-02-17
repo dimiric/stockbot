@@ -86,7 +86,7 @@ with conn:
             if asset.status == 'active' and asset.tradable and asset.symbol not in stored_symbols:
                 i = i + 1
                 #print(type(asset))
-                print(f"{i} - Adding New Stock: {asset.symbol} {asset.name} ({asset.id}) - {asset_start}")
+                print(f"{i} out of {len(curr_symbols)}- Adding New Stock: {asset.symbol} {asset.name} ({asset.id}) - {asset_start}")
                 #Fundamentals
                 funda = c.search_instruments({asset.symbol}, c.Instrument.Projection.FUNDAMENTAL)
                 f = funda.json()

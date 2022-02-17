@@ -56,8 +56,8 @@ with conn:
     #Grab current symbols in Stock Table
     cur.execute("SELECT symbol, name, id, tables_filled FROM stocks")
     rows = cur.fetchall()
-    #stored_symbols = [row['symbol'] for row in rows]
-
+    xsymbs = [row['symbol'] for row in rows]
+    
     #Alpaca grab stock list
     #print(f"Grabbing fresh stock list - {today}")
     #api = aapi.REST(conf.alp_apikey, conf.alp_secret, base_url=conf.alp_base_url) # or use ENV Vars shown below
@@ -85,7 +85,7 @@ with conn:
             k = 0
             #try:
             i = i + 1
-            print(f"{i} - Adding Historical Price Data: {row['symbol']} {row['name']} ({row['id']}) ({row['tables_filled']}- {asset_start}")
+            print(f"{i} out of {len(xsymbs)} - Adding Historical Price Data: {row['symbol']} {row['name']} ({row['id']}) ({row['tables_filled']}- {asset_start}")
             if row['tables_filled'] == 0 or row['tables_filled'] == 1 or row['tables_filled'] == 2:
                 print(f"----------->  ATTENTION: {row['symbol']} is set to {row['tables_filled']} and may be missing data! ")
                 followups.append(row['symbol'])
