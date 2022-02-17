@@ -19,7 +19,11 @@ def proper_round(num, dec=0):
 def current_milli_time():
     return round(time.time() * 1000)
 
-#brakes = current_milli_time()
+brakes = (current_milli_time()/1000)
+start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(brakes))
+
+quit()
+
 #print(brakes)
 
 # Declare class to store JSON data into a python dictionary
@@ -76,7 +80,7 @@ with conn:
     i = 0
     
     for asset in assets:
-        start = time.time()
+        start_asset = time.time()
         k = 0
         try:
 #            if asset.symbol == 'BP' and asset.status == 'active' and asset.tradable and asset.symbol not in stored_symbols:

@@ -74,9 +74,10 @@ with conn:
     #    print(f"--------")
 
     i = 0
+    start1 = time.time()
     
     for asset in assets:
-        start = time.time()
+        start2 = time.time()
         k = 0
         try:
 #            if asset.symbol == 'BP' and asset.status == 'active' and asset.tradable and asset.symbol not in stored_symbols:
