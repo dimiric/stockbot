@@ -21,6 +21,7 @@ def current_milli_time():
 
 brakes = (current_milli_time()/1000)
 start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(brakes))
+print(start)
 
 quit()
 
