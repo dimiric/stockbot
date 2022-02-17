@@ -19,13 +19,9 @@ def proper_round(num, dec=0):
 def current_milli_time():
     return round(time.time() * 1000)
 
-brakes = (current_milli_time()/1000)
-start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(brakes))
-print(start)
-
-quit()
-
-#print(brakes)
+startmilli = (current_milli_time()/1000)
+prog_start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(startmilli))
+print(f"Add Stocks started at: {prog_start}")
 
 # Declare class to store JSON data into a python dictionary
 class read_data(object):
@@ -193,8 +189,8 @@ with conn:
                 # Commit database changes
                 conn.commit()
 
-                end = time.time()
-                print(f"Elapsed time to add all data for {asset.symbol}: {proper_round((end - start),1)} seconds")
+                end_asset = time.time()
+                print(f"Elapsed time to add all data for {asset.symbol}: {proper_round((end_asset - start_asset),1)} seconds")
 
         except Exception as e:
             print(f"{i}) Failed to add {asset.symbol}  ---->   {e}")
@@ -202,3 +198,8 @@ with conn:
 
     #Commit changes to DB
     conn.commit()
+
+    endmilli = (current_milli_time()/1000)
+    prog_end = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(endmilli))
+    print(f"Add Stocks ended at: {prog_end}")
+    print(f"Total elapsed time to add stocks: {proper_round((endmilli - startmilli),1)} seconds")
