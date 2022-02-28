@@ -41,8 +41,27 @@ class NewTables:
                 exchange TEXT NOT NULL,
                 type TEXT NOT NULL,
                 marginable TEXT NOT NULL,
-                tables_filled INTEGER NOT NULL,
-                updated_date DATE NOT NULL
+                table_fundamentals INTEGER,
+                table_daily INTEGER,
+                table_1min INTEGER,
+                table_5min INTEGER,
+                table_15min INTEGER,
+                table_30min INTEGER,
+                table_1hr INTEGER,
+                table_2hr INTEGER,
+                table_4hr INTEGER,
+                table_funda_milli INTEGER,
+                table_daily_milli INTEGER,
+                table_1min_milli INTEGER,
+                table_5min_milli INTEGER,
+                table_15min_milli INTEGER,
+                table_30min_milli INTEGER,
+                table_1hr_milli INTEGER,
+                table_2hr_milli INTEGER,
+                table_4hr_milli INTEGER,
+                added_date DATE NOT NULL,
+                updated_date DATE NOT NULL,
+                status INTEGER
                 );"""
             )
 
@@ -115,6 +134,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -133,6 +153,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -151,6 +172,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -169,6 +191,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -187,6 +210,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -205,6 +229,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -223,6 +248,7 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
@@ -241,10 +267,10 @@ class NewTables:
                 low NUMERIC(16,6) NOT NULL,
                 close NUMERIC(16,6) NOT NULL,
                 volume NUMERIC(16,0) NOT NULL,
+                hist_source INTEGER,
                 FOREIGN KEY (stock_id) REFERENCES stocks (id)
                 );"""
             )
 
         #Commit changes to DB
         conn.commit()
-
