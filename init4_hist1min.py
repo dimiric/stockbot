@@ -1,7 +1,7 @@
 from copy import copy
 import psycopg2
 import psycopg2.extras
-import config as conf
+import settings.config as conf
 import alpaca_trade_api as aapi
 import json
 from datetime import datetime, timezone, timedelta

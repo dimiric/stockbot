@@ -1,4 +1,4 @@
-import config as conf
+import settings.config as conf
 import alpaca_trade_api as aapi
 
 # Alpaca query for all available stock symbols

@@ -3,7 +3,7 @@ from copy import copy
 from numpy import float16
 import psycopg2
 import psycopg2.extras
-import config as conf
+import settings.config as conf
 import alpaca_trade_api as aapi
 import json
 from datetime import datetime, timezone, timedelta
@@ -33,7 +33,7 @@ def PrintException():
     linecache.checkcache(filename)
     line = linecache.getline(filename, lineno, f.f_globals)
     # Errors to logfile
-    with open('errors.txt', 'a') as f:
+    with open('logs/errors.txt', 'a') as f:
         msg = 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
         f.write(msg)
         f.write('\n')
@@ -42,7 +42,7 @@ def PrintException():
 
 # Symbols that are trouble
 def AddToProblemFile():
-    with open('problemsymbols.txt', 'a') as problemfile:
+    with open('logs/problemsymbols.txt', 'a') as problemfile:
         problemfile.write(alpaca_asset.symbol)
         problemfile.write('\n')
 
@@ -107,7 +107,7 @@ with conn:
     stored_symbols = [row['symbol'] for row in rows]
 
     # Read all Symbols that previously had a problem into a variable to avoid
-    with open('problemsymbols.txt', 'r') as f:
+    with open('logs/problemsymbols.txt', 'r') as f:
         bad_symbols=f.read().split("\n")
 
     # Alpaca grab stock list
@@ -132,7 +132,7 @@ with conn:
                 cur.execute("SELECT * FROM stocks where symbol = %s;", [alpaca_asset.symbol])
             except:
                 print(f"{alpaca_asset.symbol} in stored_symbols but error when select statement run on stocks")
-                with open('issues.txt', 'a') as problemfile:
+                with open('logs/issues.txt', 'a') as problemfile:
                     problemfile.write(alpaca_asset.symbol)
                     problemfile.write(' was in stored symbols, but errored on Select from stocks table\n')
             cur_id = cur.fetchall()
@@ -253,6 +253,6 @@ with conn:
     print(f"Total elapsed time to add stocks: {proper_round((endmilli - startmilli),1)} seconds")
     print(f"Skipped: {skipcount}   New: {new_stock_count}   Updated: {updated_stock_count}")
     print(f"{inact_count} from Stock Table were marked inactive and {act_count} reactivated.")
-    with open('problemsymbols.txt', 'r') as f:
+    with open('logs/problemsymbols.txt', 'r') as f:
         bad_symbols=f.read().split("\n")
         print(f"Blackedlisted: {badcount}   ({bad_symbols})")

@@ -1,6 +1,6 @@
 import psycopg2
 import psycopg2.extras
-import config as conf
+import settings.config as conf
 
 class NewTables:
     #Establish Postgresql connection based on settings in config.py
