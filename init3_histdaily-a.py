@@ -1,3 +1,9 @@
+# File for initial Historical Daily Price Data for stocks in database
+# Will also add only new data after last stored date if existing price data.
+#
+# Tweaked to be able to have multiple servers running command without overlap.
+# Use Instance_Count and Instance_Num to utilize
+
 from copy import copy
 from numpy import float16
 import psycopg2
@@ -13,6 +19,8 @@ import linecache
 import sys
 
 #Initial Variables
+instance_num = 1
+instance_count = 2
 new_stock_count = 0
 updated_stock_count = 0
 dbasset_num = 0
@@ -130,16 +138,18 @@ with conn:
         bad_symbols=f.read().split("\n")
     
     # initializing list to hold query times
-    qtime_list = [] 
-    for value in range(0,120):
+    qtime_list = []
+    lct = round(120/instance_count)
+    for value in range(0,lct):
         qtime_list.append(0)
     stock_num = 0
 
     # Cycle through all symbols grabbed from DB
     for cur_id in rows:
         stock_num += 1
-        # added this when I split the initial download to 2 systems
-        if stock_num >= stock_total/2:
+        # added this when I split the initial download to multiple systems
+        # need to add a method to divide past 2 systems downloading....  **********
+        if stock_num >= stock_total/instance_count:
             continue
         starttime_dbasset = (current_milli_time()/1000)
         dbasset_starttime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(starttime_dbasset))
@@ -189,17 +199,19 @@ with conn:
         stock_name = cur_id[2]
         dbasset_num += 1
 
-        #     Speed Enforcement Portion      #############################################################################
+        #     Speed Enforcement Portion based on number of instances  ####################################################
+        lct = round(120/instance_count) - 1
+        thresh = (60 * instance_count) + 6
         i += 1
         query_time = (current_milli_time()/1000)
-        chunk120time = query_time - qtime_list[0]
-        chunk1time = query_time - qtime_list[119]
+        chunkXtime = query_time - qtime_list[0]
+        chunk1time = query_time - qtime_list[lct]
         qtime_list.pop(0)
         qtime_list.append(query_time)
-        print(f"  +++++ Time to perform last 120 TDA queries: {chunk120time} seconds")
-        if ((chunk120time < 65) and (i > 120)):
-            sleeptime = (66 - chunk120time)
-            print(f"{i} - {chunk120time}:                  120 Marker --------->  Sleeping for {sleeptime} seconds.")
+        print(f"  +++++ Time to perform last {lct + 1} TDA queries: {chunkXtime} seconds")
+        if ((chunkXtime < thresh) and (i > 120)):
+            sleeptime = ((thresh + 1) - chunkXtime)
+            print(f"{i} - {chunkXtime}:                  {lct + 1} Marker --------->  Sleeping for {sleeptime} seconds.")
             time.sleep(sleeptime)
         if ((chunk1time < .55) and (i > 2)):
             sleeptime = (.6 - chunk1time)
@@ -236,7 +248,7 @@ with conn:
             continue
         p1 = 'candles'
         p2 = prices[p1]
-        print(f">>> Error checking to see if price data variable is empty: {prices['empty']}")
+        # print(f">>> Error checking to see if price data variable is empty: {prices['empty']}")
         if (prices['empty'] == True):
             print(f"No new data for stock {stock_symbol}")
             continue

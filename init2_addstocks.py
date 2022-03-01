@@ -256,6 +256,7 @@ with conn:
             end_alpaca_asset = (current_milli_time()/1000)
             answer = str(round((end_alpaca_asset - start_alpaca_asset), 2))
             print(f"Asset time: {answer} seconds")
+            print(f"\n")
 
             cur.execute("UPDATE stocks SET table_funda_milli = %s, table_fundamentals = %s where id = %s;", (start_alpaca_asset, on, id))
 
