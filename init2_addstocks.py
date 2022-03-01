@@ -34,7 +34,7 @@ def PrintException():
     linecache.checkcache(filename)
     line = linecache.getline(filename, lineno, f.f_globals)
     # Errors to logfile
-    with open('logs/errors.txt', 'a+') as f:
+    with open(conf.ErrorsFile, 'a+') as f:
         msg = 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
         f.write(msg)
         f.write('\n')
@@ -43,7 +43,7 @@ def PrintException():
 
 # Symbols that are trouble
 def AddToProblemFile():
-    with open('logs/problemsymbols.txt', 'a+') as problemfile:
+    with open(conf.ProblemFile, 'a+') as problemfile:
         problemfile.write(alpaca_asset.symbol)
         problemfile.write('\n')
 
@@ -147,7 +147,7 @@ with conn:
                 cur.execute("SELECT * FROM stocks where symbol = %s;", [alpaca_asset.symbol])
             except:
                 print(f"{alpaca_asset.symbol} in stored_symbols but error when select statement run on stocks")
-                with open('logs/issues.txt', 'a') as problemfile:
+                with open(conf.IssuesFile, 'a') as problemfile:
                     problemfile.write(alpaca_asset.symbol)
                     problemfile.write(' was in stored symbols, but errored on Select from stocks table\n')
             cur_id = cur.fetchall()
@@ -173,25 +173,28 @@ with conn:
         alpaca_asset_start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(startmilli))
         alpaca_asset_num += 1
 
-        # Process active Tradable symbols from Alpaca 
+        # Process active Tradable symbols from Alpaca
         if alpaca_asset.status == 'active' and alpaca_asset.tradable:
-            #Fundamentals
-            i = i + 1
+
+            #     Speed Enforcement Portion      #############################################################################
+            i += 1
             query_time = (current_milli_time()/1000)
             chunk120time = query_time - qtime_list[0]
             chunk1time = query_time - qtime_list[119]
-            qtime_list.pop(0)
+            qtime_list.pop(0)  # Drop oldest time from list
             qtime_list.append(query_time)
             print(f"  +++++ Time to perform last 120 TDA queries: {chunk120time} seconds")
             if ((chunk120time < 65) and (i > 120)):
                 sleeptime = (66 - chunk120time)
-                print(f"{i} - {chunk120time}:                  120 Marker --------->  Sleeping for {sleeptime} seconds.")
+                print(f"                  120 Second Speed Marker --------->  Sleeping for {sleeptime} seconds.")
                 time.sleep(sleeptime)
             if ((chunk1time < .55) and (i > 2)):
                 sleeptime = (.6 - chunk1time)
-                print(f"{i} - {chunk1time}:                    1 Marker --------->  Sleeping for {sleeptime} seconds.")
+                print(f"                    1 Second Speed Marker --------->  Sleeping for {sleeptime} seconds.")
                 time.sleep(sleeptime)
+            ##################################################################################################################
 
+            # Grab Fundamentals from TDA
             try:
                 funda = c.search_instruments({alpaca_asset.symbol}, c.Instrument.Projection.FUNDAMENTAL)
                 assert funda.status_code == 200, funda.raise_for_status()
@@ -268,6 +271,6 @@ with conn:
     print(f"Total elapsed time to add stocks: {proper_round((endmilli - startmilli),1)} seconds")
     print(f"Skipped: {skipcount}   New: {new_stock_count}   Updated: {updated_stock_count}")
     print(f"{inact_count} from Stock Table were marked inactive and {act_count} reactivated.")
-    with open('logs/problemsymbols.txt', 'r') as f:
+    with open(conf.ProblemFile, 'r') as f:
         bad_symbols=f.read().split("\n")
         print(f"Blackedlisted: {badcount}   ({bad_symbols})")
