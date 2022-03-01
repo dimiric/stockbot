@@ -176,7 +176,7 @@ with conn:
 #        price_rows = cur.fetchall()
 #        price_count = len(price_rows)
 
-        print(f"{stock_num}/{stock_total} - Retrieving New Daily Stock Prices for {stock_symbol}.")
+        print(f"{stock_num}/{stock_total} - Retrieving New Daily Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
         cur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s;", (id,))
         result = cur.fetchall()
         price_count = result[0][0]
@@ -304,9 +304,9 @@ with conn:
         conn.commit()
 
         endtime_dbasset = (current_milli_time()/1000)
-        dbasset_endtime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(starttime_dbasset))
+        dbasset_endtime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(endtime_dbasset))
         answer = str(round((endtime_dbasset - starttime_dbasset), 2))
-        print(f"Time to grab {stock_symbol} Daily Prices: {answer} seconds")
+        print(f"{dbasset_endtime} - Elapsed Time for {stock_symbol} Daily Price Update: {answer} seconds")
         print(f"\n")
 
     # Commit changes to DB
