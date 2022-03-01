@@ -5,6 +5,7 @@ import psycopg2.extras
 import settings.config as conf
 import alpaca_trade_api as aapi
 import json
+from os.path import exists
 from datetime import datetime, timezone, timedelta
 import datetime as d
 import time
@@ -30,7 +31,7 @@ def PrintException():
     linecache.checkcache(filename)
     line = linecache.getline(filename, lineno, f.f_globals)
     # Errors to logfile
-    with open('logs/errors.txt', 'a') as f:
+    with open(conf.IssuesFile, 'a+') as f:
         msg = 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
         f.write(msg)
         f.write('\n')
@@ -39,7 +40,7 @@ def PrintException():
 
 # Symbols that are trouble
 def AddToProblemFile():
-    with open('logs/problemsymbols.txt', 'a') as problemfile:
+    with open(conf.ProblemFile, 'a+') as problemfile:
         problemfile.write(stock_symbol)
         problemfile.write('\n')
 
@@ -80,6 +81,20 @@ conn = psycopg2.connect(
     sslmode=conf.dbsslmode
     )
 
+# Check for log files
+file_exists = exists(conf.ProblemFile)
+if not file_exists:
+    f = open(conf.ProblemFile, 'w')
+    f.close()
+file_exists = exists(conf.IssuesFile)
+if not file_exists:
+    f = open(conf.IssuesFile, 'w')
+    f.close()
+file_exists = exists(conf.ErrorsFile)
+if not file_exists:
+    f = open(conf.ErrorsFile, 'w')
+    f.close()
+
 # Get token from TDA
 from tda import auth, client
 try:
@@ -111,7 +126,7 @@ with conn:
         exit()
 
     # Read all Problem Symbols into a variable to avoid
-    with open('logs/problemsymbols.txt', 'r') as f:
+    with open(conf.ProblemFile, 'r') as f:
         bad_symbols=f.read().split("\n")
     
     # initializing list to hold query times
@@ -124,7 +139,7 @@ with conn:
     for cur_id in rows:
         stock_num += 1
         # added this when I split the initial download to 2 systems
-        if stock_num > stock_total/2:
+        if stock_num >= stock_total/2:
             continue
         starttime_dbasset = (current_milli_time()/1000)
         dbasset_starttime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(starttime_dbasset))
@@ -222,7 +237,7 @@ with conn:
         p1 = 'candles'
         p2 = prices[p1]
         print(f">>> Error checking to see if price data variable is empty: {prices['empty']}")
-        if (prices['empty'] == 'True'):
+        if (prices['empty'] == True):
             print(f"No new data for stock {stock_symbol}")
             continue
         print(f"- Number of new daily price records found for {stock_symbol} from TDA: {len(p2)}")
@@ -290,6 +305,6 @@ with conn:
     print(f"Add Stocks ended at: {prog_end}")
     print(f"Total elapsed time to add stocks: {proper_round((endmilli - startmilli),1)} seconds")
     print(f"Skipped: {skipcount}   New: {new_stock_count}   Updated: {updated_stock_count}")
-    with open('logs/problemsymbols.txt', 'r') as f:
+    with open(conf.ProblemFile, 'r') as f:
         bad_symbols=f.read().split("\n")
         print(f"Blackedlisted: {badcount}   ({bad_symbols})")

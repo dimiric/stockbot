@@ -6,6 +6,7 @@ import psycopg2.extras
 import settings.config as conf
 import alpaca_trade_api as aapi
 import json
+from os.path import exists
 from datetime import datetime, timezone, timedelta
 import datetime as d
 import time
@@ -33,7 +34,7 @@ def PrintException():
     linecache.checkcache(filename)
     line = linecache.getline(filename, lineno, f.f_globals)
     # Errors to logfile
-    with open('logs/errors.txt', 'a') as f:
+    with open('logs/errors.txt', 'a+') as f:
         msg = 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
         f.write(msg)
         f.write('\n')
@@ -42,7 +43,7 @@ def PrintException():
 
 # Symbols that are trouble
 def AddToProblemFile():
-    with open('logs/problemsymbols.txt', 'a') as problemfile:
+    with open('logs/problemsymbols.txt', 'a+') as problemfile:
         problemfile.write(alpaca_asset.symbol)
         problemfile.write('\n')
 
@@ -97,6 +98,20 @@ except Exception:
     # If the file is expired?
     print(e)
 
+# Check for log files
+file_exists = exists(conf.ProblemFile)
+if not file_exists:
+    f = open(conf.ProblemFile, 'w')
+    f.close()
+file_exists = exists(conf.IssuesFile)
+if not file_exists:
+    f = open(conf.IssuesFile, 'w')
+    f.close()
+file_exists = exists(conf.ErrorsFile)
+if not file_exists:
+    f = open(conf.ErrorsFile, 'w')
+    f.close()
+
 # With Connection to Database active, run main set of commands
 with conn:
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -107,7 +122,7 @@ with conn:
     stored_symbols = [row['symbol'] for row in rows]
 
     # Read all Symbols that previously had a problem into a variable to avoid
-    with open('logs/problemsymbols.txt', 'r') as f:
+    with open(conf.ProblemFile, 'r') as f:
         bad_symbols=f.read().split("\n")
 
     # Alpaca grab stock list
