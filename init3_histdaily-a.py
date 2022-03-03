@@ -253,7 +253,7 @@ with conn:
         if (prices['empty'] == True):
             print(f"No new data for stock {stock_symbol}")
             continue
-        print(f"- Number of new daily price records found for {stock_symbol} from TDA: {len(p2)}")
+        print(f"- Number of new daily price records found for {stock_symbol} from TDA: {len(p2)-1}")
         fromdate = time.localtime((prices['candles'][0]['datetime'])/1000)
         todate = time.localtime((prices['candles'][(len(prices['candles'])-1)]['datetime'])/1000)
         print(f"- TDA Price Data Date Range from: {time.strftime('%Y-%m-%d %H:%M:%S', fromdate)} to {time.strftime('%Y-%m-%d %H:%M:%S', todate)}")
@@ -266,22 +266,30 @@ with conn:
             bardate = time.strftime('%Y-%m-%d', time.localtime(bardt))
             bartime = time.strftime('%H:%M:%S', time.localtime(bardt))
             
+            # Need to see if the bar already exists in database
             try:
-                cur.execute("SELECT * FROM prices_daily where datetime = %s and stock_id = %s;", (bardt, id))
+                cur.execute("SELECT (SELECT hist_source FROM prices_daily where datetime = %s and stock_id = %s) as hist_source;", (bardt, id))
                 result = cur.fetchall()
-                bar_stored = len(result)
+                # bar_stored = len(result)
             except Exception as e:
                 badcount += 1
                 PrintException()
                 exit()
 
-            if bar_stored > 0:
-                if result['hist_source'] == 1:
-                    bar_skip += 1
-                    continue
-                else:
+            # print(result)
+
+            # Determine if the hist_source was a 1 or 0, or if it doesn't exist at all (None)
+            if result == 1:
+                bar_skip += 1
+                continue
+            elif result == 0:
+                try:
+                    cur.execute("UPDATE prices_daily SET open = %s, high = %s, low = %s, close = %s, volume = %s, hist_source = 1 where datetime = %s and id = %s;", (p2[p5bar]['open'], p2[p5bar]['high'], p2[p5bar]['low'], p2[p5bar]['close'], p2[p5bar]['volume'], bardt, id))
                     bar_update += 1
-                    cur.execute("UPDATE prices_daily SET open = %s, high = %s, low = %s, close = %s, volume = %s, hist_source = %s where datetime = %s and id = %s;", (p2[p5bar]['open'], p2[p5bar]['high'], p2[p5bar]['low'], p2[p5bar]['close'], p2[p5bar]['volume'], bardt, id))
+                except Exception as e:
+                    badcount += 1
+                    PrintException()
+                    continue
             else:
                 try:
                     bar_add += 1
