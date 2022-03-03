@@ -76,7 +76,7 @@ today = d.datetime.now()
 startmilli = (current_milli_time()/1000)
 prog_start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(startmilli))
 today_date = time.strftime('%Y-%m-%d', time.localtime(startmilli))
-milli_30yr = (current_milli_time()/1000) - 1000000000
+milli_10yr = (current_milli_time()/1000) - 350000000
 
 print(f"Adding Historical Daily Stock Prices started at: {prog_start}")
 
@@ -164,7 +164,7 @@ with conn:
             continue
         daily_milli = cur_id[4]
         if not daily_milli:
-            daily_milli = milli_30yr
+            daily_milli = milli_10yr
         daily_updated = time.strftime('%Y-%m-%d', time.localtime(daily_milli))
         daily_state = cur_id[3]
         if ((daily_updated == today_date) and (daily_state == 1)):
@@ -181,7 +181,7 @@ with conn:
         cur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s;", (id,))
         result = cur.fetchall()
         price_count = result[0][0]
-        price_maxdate = milli_30yr
+        price_maxdate = milli_10yr
         if price_count > 0:
             cur.execute("SELECT MAX(datetime) AS maximum FROM prices_daily where stock_id = %s;", (id,))
             result = cur.fetchall()
