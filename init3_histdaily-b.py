@@ -261,7 +261,7 @@ with conn:
         bar_skip = 0
         bar_update = 0
         bar_add = 0
-        for p5bar in tqdm(range(0, (len(prices['candles'])-1))):
+        for p5bar in tqdm(range(0, (len(prices['candles'])-1)), ncols = 100, ascii = True, desc = stock_symbol):
             bardt = (prices['candles'][p5bar]['datetime'])//1000
             bardate = time.strftime('%Y-%m-%d', time.localtime(bardt))
             bartime = time.strftime('%H:%M:%S', time.localtime(bardt))
