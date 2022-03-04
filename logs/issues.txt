@@ -1,2 +1,0 @@
-EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 274 "bar_stored = len(result)"): object of type 'NoneType' has no len()
-EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 274 "bar_stored = len(result)"): object of type 'NoneType' has no len()
