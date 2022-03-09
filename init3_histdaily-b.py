@@ -164,9 +164,9 @@ with dbconn:
     milli_1yr = startmilli - 35000000
     milli_30yr = startmilli - 1000000000
 
-    stock_num = 0
-    
     for chunk in range (0, 2):
+        stock_num = 0
+
         # Read all Problem Symbols into a variable to avoid
         with open(conf.ProblemFile, 'r') as f:
             bad_symbols = f.read().split("\n")
