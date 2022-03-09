@@ -338,7 +338,7 @@ with dbconn:
                 # Need to see if the bar already exists in database
                 try:
                     dbcur.execute(
-                        "SELECT (SELECT hist_source FROM prices_daily where datetime = %s and stock_id = %s) as hist_source;", (bardt, id))
+                        "SELECT (SELECT hist_source FROM prices_daily where datetime = %s and stock_id = %s limit 1) as hist_source;", (bardt, id))
                     result = dbcur.fetchall()
                     # bar_stored = len(result)
                 except Exception as e:

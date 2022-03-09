@@ -146,7 +146,7 @@ with dbconn:
     # Grab current symbols in Stock Table from database
     try:
         dbcur.execute(
-            "SELECT id, symbol, name, table_daily, table_daily_milli, status FROM stocks")
+            "SELECT id, symbol, name, table_1min, table_1min_milli, status FROM stocks")
         rows = dbcur.fetchall()
         stored_symbols = [row['symbol'] for row in rows]
         stock_total = len(stored_symbols)
@@ -161,8 +161,8 @@ with dbconn:
     for value in range(0, lct):
         qtime_list.append(0)
 
-    milli_1yr = startmilli - 35000000
-    milli_30yr = startmilli - 1000000000
+    milli_1mo = startmilli - 2500000
+    milli_3mo = startmilli - 7800000
 
     stock_num = 0
     
@@ -197,7 +197,7 @@ with dbconn:
             daily_milli = cur_id[4]
             # (If daily milli is blank, set it to something)
             if not daily_milli:
-                daily_milli = milli_1yr
+                daily_milli = milli_1mo
 
             daily_updated = time.strftime('%Y-%m-%d', time.localtime(daily_milli))
             daily_state = cur_id[3]
@@ -217,7 +217,7 @@ with dbconn:
             dbasset_num += 1
 
             try:
-                dbcur.execute("UPDATE stocks SET table_daily = %s where id = %s;", (chunk, id))  
+                dbcur.execute("UPDATE stocks SET table_1min = %s where id = %s;", (chunk, id))  
             except Exception as e:
                 badcount += 1
                 PrintException()
@@ -246,37 +246,37 @@ with dbconn:
                 time.sleep(sleeptime)
             ##################################################################################################################
 
-    #        cur.execute("SELECT datetime FROM prices_daily where stock_id = %s;", (id,))
+    #        cur.execute("SELECT datetime FROM prices_1min where stock_id = %s;", (id,))
     #        price_rows = cur.fetchall()
     #        price_count = len(price_rows)
 
             print(f"{stock_num}/{stock_total} - Retrieving New Daily Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
-            dbcur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
+            dbcur.execute("SELECT COUNT(datetime) FROM prices_1min where stock_id = %s and hist_source = 0;", (id,))
             result = dbcur.fetchall()
             price_count_live = result[0][0]
             if price_count_live > 0:
-                dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
+                dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_1min where stock_id = %s and hist_source = 0;", (id,))
                 result = dbcur.fetchall()
                 price_mindate_live = result[0][0]
-                dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
+                dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_1min where stock_id = %s and hist_source = 0;", (id,))
                 result = dbcur.fetchall()
                 price_maxdate_live = result[0][0]
                 print(f"Most recent Live Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_live))}   {price_count} total price records")
                 print(f"Oldest Live Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_live))}")
                 try:
-                    dbcur.execute("DELETE FROM prices_daily where stock_id = %s and hist_source = 0 and datetime BETWEEN %s and %s;", (id, price_mindate_live, price_maxdate_live))
+                    dbcur.execute("DELETE FROM prices_1min where stock_id = %s and hist_source = 0 and datetime BETWEEN %s and %s;", (id, price_mindate_live, price_maxdate_live))
                     print(f"   ->>>>  All live data removed.")
                 except Exception as e:
                     badcount += 1
                     PrintException()
-            dbcur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s;", (id,))
+            dbcur.execute("SELECT COUNT(datetime) FROM prices_1min where stock_id = %s;", (id,))
             result = dbcur.fetchall()
             price_count = result[0][0]
             if price_count > 0:
-                dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_daily where stock_id = %s and hist_source = 1;", (id,))
+                dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_1min where stock_id = %s and hist_source = 1;", (id,))
                 result = dbcur.fetchall()
                 price_maxdate_hist = result[0][0]
-                dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_daily where stock_id = %s and hist_source = 1;", (id,))
+                dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_1min where stock_id = %s and hist_source = 1;", (id,))
                 result = dbcur.fetchall()
                 price_mindate_hist = result[0][0]
                 print(f"Most recent Historical Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_hist))}   {price_count} total price records")
@@ -285,21 +285,21 @@ with dbconn:
                     srewind = round((query_time - price_maxdate_hist)/86400)
                     erewind = 0
                 else:
-                    srewind = round((query_time - milli_30yr)/86400)
+                    srewind = round((query_time - milli_3mo)/86400)
                     erewind = round((query_time - price_mindate_hist)/86400)
             else:
                 print(f"No Daily Price data found in stockbot database")
-                srewind = round((query_time - milli_1yr)/86400)
+                srewind = round((query_time - milli_1mo)/86400)
                 erewind = 0
             hist_start = datetime.now(timezone.utc) - timedelta(days=srewind)
             hist_end = datetime.now(timezone.utc) - timedelta(days=erewind)
             print(f"Pulling data from {hist_start} to {hist_end}")
 
             ###################################################
-            # Last X years of daily price data for stock  #
+            # Last X years of minute price data for stock  #
             ###################################################
             try:
-                price_data = c.get_price_history_every_day(stock_symbol, start_datetime=hist_start, end_datetime=hist_end)
+                price_data = c.get_price_history_every_minute(stock_symbol, start_datetime=hist_start, end_datetime=hist_end)
                 assert price_data.status_code == 200, price_data.raise_for_status()
                 # print(json.dumps(price_data.json(), indent=4))
             except Exception as e:
@@ -338,7 +338,7 @@ with dbconn:
                 # Need to see if the bar already exists in database
                 try:
                     dbcur.execute(
-                        "SELECT (SELECT hist_source FROM prices_daily where datetime = %s and stock_id = %s limit 1) as hist_source;", (bardt, id))
+                        "SELECT (SELECT hist_source FROM prices_1min where datetime = %s and stock_id = %s) as hist_source;", (bardt, id))
                     result = dbcur.fetchall()
                     # bar_stored = len(result)
                 except Exception as e:
@@ -354,7 +354,7 @@ with dbconn:
                     continue
                 elif result == 0:
                     try:
-                        dbcur.execute("UPDATE prices_daily SET open = %s, high = %s, low = %s, close = %s, volume = %s, hist_source = 1 where datetime = %s and id = %s;", (
+                        dbcur.execute("UPDATE prices_1min SET open = %s, high = %s, low = %s, close = %s, volume = %s, hist_source = 1 where datetime = %s and id = %s;", (
                             p2[p5bar]['open'], p2[p5bar]['high'], p2[p5bar]['low'], p2[p5bar]['close'], p2[p5bar]['volume'], bardt, id))
                         bar_update += 1
                     except Exception as e:
@@ -364,7 +364,7 @@ with dbconn:
                 else:
                     try:
                         bar_add += 1
-                        dbcur.execute("INSERT INTO prices_daily (stock_id, datetime, tradingday, open, high, low, close, volume, hist_source) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 1);", (
+                        dbcur.execute("INSERT INTO prices_1min (stock_id, datetime, tradingday, open, high, low, close, volume, hist_source) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 1);", (
                             id, bardt, bardate, p2[p5bar]['open'], p2[p5bar]['high'], p2[p5bar]['low'], p2[p5bar]['close'], p2[p5bar]['volume']))
                     except Exception as e:
                         badcount += 1
@@ -377,7 +377,7 @@ with dbconn:
 
             try:
                 dbcur.execute(
-                    "UPDATE stocks SET table_daily = %s, table_daily_milli = %s where id = %s;", (chunk+1, query_time, id))
+                    "UPDATE stocks SET table_1min = %s, table_1min_milli = %s where id = %s;", (chunk+1, query_time, id))
             except Exception as e:
                 badcount += 1
                 PrintException()

@@ -1,0 +1,18 @@
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): more than one row returned by a subquery used as an expression
+
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): more than one row returned by a subquery used as an expression
+
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): more than one row returned by a subquery used as an expression
+
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): more than one row returned by a subquery used as an expression
+
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): more than one row returned by a subquery used as an expression
+
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): syntax error at or near "where"
+LINE 1: ...ECT (SELECT hist_source FROM prices_daily LIMIT 1 where date...
+                                                             ^
+
+EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.execute("): syntax error at or near "where"
+LINE 1: ...ECT (SELECT hist_source FROM prices_daily LIMIT 1 where date...
+                                                             ^
+
