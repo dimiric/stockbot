@@ -187,7 +187,7 @@ with dbconn:
             if stock_symbol in bad_symbols:
                 if chunk == 0:
                     badcount += 1
-                print(f"{stock_num}/{stock_total} - Avoiding {stock_symbol} because it has had problems before and is blacklisted.")
+                print(f"{stock_num}/{stock_total} - {chunk} - Avoiding {stock_symbol} because it has had problems before and is blacklisted.")
                 continue
 
             stock_status = cur_id[5]
@@ -250,7 +250,7 @@ with dbconn:
     #        price_rows = cur.fetchall()
     #        price_count = len(price_rows)
 
-            print(f"{stock_num}/{stock_total} - Retrieving New Daily Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
+            print(f"{stock_num}/{stock_total} - {chunk} - Retrieving New Daily Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
             dbcur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
             result = dbcur.fetchall()
             price_count_live = result[0][0]
