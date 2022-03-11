@@ -14,6 +14,8 @@ from tqdm import tqdm
 import psycopg2
 import psycopg2.extras
 import settings.config as conf
+import utilities.error as err
+import utilities.dbutils as dbu
 import alpaca_trade_api as aapi
 import json
 from os.path import exists
@@ -330,50 +332,13 @@ with dbconn:
             bar_skip = 0
             bar_update = 0
             bar_add = 0
-            for p5bar in tqdm(range(0, (len(prices['candles'])-1)), ncols=100, ascii=True, desc=stock_symbol):
-                bardt = (prices['candles'][p5bar]['datetime'])//1000
-                bardate = time.strftime('%Y-%m-%d', time.localtime(bardt))
-                bartime = time.strftime('%H:%M:%S', time.localtime(bardt))
-
-                # Need to see if the bar already exists in database
-                try:
-                    dbcur.execute(
-                        "SELECT (SELECT hist_source FROM prices_daily where datetime = %s and stock_id = %s limit 1) as hist_source;", (bardt, id))
-                    result = dbcur.fetchall()
-                    # bar_stored = len(result)
-                except Exception as e:
-                    badcount += 1
-                    PrintException()
-                    exit()
-
-                # print(result)
-
-                # Determine if the hist_source was a 1 or 0, or if it doesn't exist at all (None)
-                if result == 1:
-                    bar_skip += 1
-                    continue
-                elif result == 0:
-                    try:
-                        dbcur.execute("UPDATE prices_daily SET open = %s, high = %s, low = %s, close = %s, volume = %s, hist_source = 1 where datetime = %s and id = %s;", (
-                            p2[p5bar]['open'], p2[p5bar]['high'], p2[p5bar]['low'], p2[p5bar]['close'], p2[p5bar]['volume'], bardt, id))
-                        bar_update += 1
-                    except Exception as e:
-                        badcount += 1
-                        PrintException()
-                        continue
-                else:
-                    try:
-                        bar_add += 1
-                        dbcur.execute("INSERT INTO prices_daily (stock_id, datetime, tradingday, open, high, low, close, volume, hist_source) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 1);", (
-                            id, bardt, bardate, p2[p5bar]['open'], p2[p5bar]['high'], p2[p5bar]['low'], p2[p5bar]['close'], p2[p5bar]['volume']))
-                    except Exception as e:
-                        badcount += 1
-                        PrintException()
-                        continue
+            for p5bar in tqdm(range(0, (len(prices['candles']))), ncols=100, ascii=True, desc=stock_symbol):
+                barX = (p2[p5bar])
+                tname = 'prices_daily'
+                dbu.DBAddNewBar(tname, id, stock_symbol, bar_update, bar_add, badcount, **barX)
 
             print(
                 f"Bars skipped: {bar_skip}    Updated: {bar_update}    Added: {bar_add}")
-            # At this point, I'll likely want to clean up all live data in database that is superceded by historicals (TO DO)
 
             try:
                 dbcur.execute(

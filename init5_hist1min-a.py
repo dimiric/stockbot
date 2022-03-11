@@ -1,4 +1,4 @@
-# File for initial Historical Daily Price Data for stocks in database
+# File for initial Historical 1 minute Price Data for stocks in database
 # Will also add only new data after last stored date if existing price data.
 #
 # Tweaked to be able to have multiple servers running command without overlap.
@@ -94,7 +94,7 @@ startmilli = (current_milli_time()/1000)
 prog_start = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(startmilli))
 today_date = time.strftime('%Y-%m-%d', time.localtime(startmilli))
 
-print(f"Adding Historical Daily Stock Prices started at: {prog_start}")
+print(f"Adding Historical 1 minute Stock Prices started at: {prog_start}")
 
 # Open the local stock db
 # sconn = sqlite3.connect(conf.db_file)
@@ -163,10 +163,10 @@ with dbconn:
 
     milli_1mo = startmilli - 2500000
     milli_3mo = startmilli - 7800000
-
-    stock_num = 0
     
     for chunk in range (0, 2):
+        stock_num = 0
+
         # Read all Problem Symbols into a variable to avoid
         with open(conf.ProblemFile, 'r') as f:
             bad_symbols = f.read().split("\n")
@@ -194,22 +194,22 @@ with dbconn:
             if stock_status == 'inactive':
                 continue
 
-            daily_milli = cur_id[4]
-            # (If daily milli is blank, set it to something)
-            if not daily_milli:
-                daily_milli = milli_1mo
+            table_milli = cur_id[4]
+            # (If table related milli is blank, set it to something)
+            if not table_milli:
+                table_milli = milli_1mo
 
-            daily_updated = time.strftime('%Y-%m-%d', time.localtime(daily_milli))
-            daily_state = cur_id[3]
+            table_updated = time.strftime('%Y-%m-%d', time.localtime(table_milli))
+            table_state = cur_id[3]
             if chunk == 0:
-                if ((daily_updated == today_date) and (daily_state == 1)):
+                if ((table_updated == today_date) and (table_state == 1)):
                     yskipcount += 1
-                    print(f"Current Year Update: {stock_num}/{stock_total} - Skipping {stock_symbol} because it seems to have already been updated today.")
+                    print(f"Current Year Update: {stock_num}/{stock_total} - {chunk} - Skipping {stock_symbol} because it seems to have already been updated today.")
                     continue
             else:
-                if ((daily_updated == today_date) and (daily_state == 2)):
+                if ((table_updated == today_date) and (table_state == 2)):
                     fskipcount += 1
-                    print(f"Full Update: {stock_num}/{stock_total} - Skipping {stock_symbol} because it seems to have already been updated today.")
+                    print(f"Full Update: {stock_num}/{stock_total} - {chunk} - Skipping {stock_symbol} because it seems to have already been updated today.")
                     continue
 
             id = cur_id[0]
@@ -250,7 +250,7 @@ with dbconn:
     #        price_rows = cur.fetchall()
     #        price_count = len(price_rows)
 
-            print(f"{stock_num}/{stock_total} - Retrieving New Daily Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
+            print(f"{stock_num}/{stock_total} - {chunk} - Retrieving New 1 minute Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
             dbcur.execute("SELECT COUNT(datetime) FROM prices_1min where stock_id = %s and hist_source = 0;", (id,))
             result = dbcur.fetchall()
             price_count_live = result[0][0]
@@ -261,8 +261,8 @@ with dbconn:
                 dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_1min where stock_id = %s and hist_source = 0;", (id,))
                 result = dbcur.fetchall()
                 price_maxdate_live = result[0][0]
-                print(f"Most recent Live Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_live))}   {price_count} total price records")
-                print(f"Oldest Live Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_live))}")
+                print(f"Most recent Live 1 minute Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_live))}   {price_count} total price records")
+                print(f"Oldest Live 1 minute Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_live))}")
                 try:
                     dbcur.execute("DELETE FROM prices_1min where stock_id = %s and hist_source = 0 and datetime BETWEEN %s and %s;", (id, price_mindate_live, price_maxdate_live))
                     print(f"   ->>>>  All live data removed.")
@@ -279,8 +279,8 @@ with dbconn:
                 dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_1min where stock_id = %s and hist_source = 1;", (id,))
                 result = dbcur.fetchall()
                 price_mindate_hist = result[0][0]
-                print(f"Most recent Historical Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_hist))}   {price_count} total price records")
-                print(f"Oldest Historical Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_hist))}")
+                print(f"Most recent Historical 1 minute Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_hist))}   {price_count} total price records")
+                print(f"Oldest Historical 1 minute Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_hist))}")
                 if chunk == 0:
                     srewind = round((query_time - price_maxdate_hist)/86400)
                     erewind = 0
@@ -288,7 +288,7 @@ with dbconn:
                     srewind = round((query_time - milli_3mo)/86400)
                     erewind = round((query_time - price_mindate_hist)/86400)
             else:
-                print(f"No Daily Price data found in stockbot database")
+                print(f"No 1 minute Price data found in stockbot database")
                 srewind = round((query_time - milli_1mo)/86400)
                 erewind = 0
             hist_start = datetime.now(timezone.utc) - timedelta(days=srewind)
@@ -320,7 +320,7 @@ with dbconn:
                 print(f"No new data for stock {stock_symbol}")
                 continue
             print(
-                f"- Number of new daily price records found for {stock_symbol} from TDA: {len(p2)-1}")
+                f"- Number of new 1 minute price records found for {stock_symbol} from TDA: {len(p2)-1}")
             fromdate = time.localtime((prices['candles'][0]['datetime'])/1000)
             todate = time.localtime(
                 (prices['candles'][(len(prices['candles'])-1)]['datetime'])/1000)
@@ -338,7 +338,7 @@ with dbconn:
                 # Need to see if the bar already exists in database
                 try:
                     dbcur.execute(
-                        "SELECT (SELECT hist_source FROM prices_1min where datetime = %s and stock_id = %s) as hist_source;", (bardt, id))
+                        "SELECT (SELECT hist_source FROM prices_1min where datetime = %s and stock_id = %s limit 1) as hist_source;", (bardt, id))
                     result = dbcur.fetchall()
                     # bar_stored = len(result)
                 except Exception as e:
@@ -389,7 +389,7 @@ with dbconn:
             endtime_dbasset = (current_milli_time()/1000)
             dbasset_endtime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(endtime_dbasset))
             answer = str(round((endtime_dbasset - starttime_dbasset), 2))
-            print(f"{dbasset_endtime} - Elapsed Time for {stock_symbol} Daily Price Update: {answer} seconds")
+            print(f"{dbasset_endtime} - Elapsed Time for {stock_symbol} 1 minute Price Update: {answer} seconds")
             print(f"\n")
 
 

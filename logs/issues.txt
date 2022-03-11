@@ -16,3 +16,7 @@ EXCEPTION IN (/home/media/repos/stockbot/init3_histdaily-a.py, LINE 340 "dbcur.e
 LINE 1: ...ECT (SELECT hist_source FROM prices_daily LIMIT 1 where date...
                                                              ^
 
+EXCEPTION IN (/home/media/repos/stockbot/utilities/dbutils.py, LINE 29 "dbcur.execute("): syntax error at or near "'prices_daily'"
+LINE 1: SELECT count(*) FROM 'prices_daily' where stock_id = 2688 an...
+                             ^
+
