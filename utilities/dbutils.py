@@ -6,7 +6,7 @@ import utilities.error as err
 import time
 import settings.config as conf
 
-def DBAddNewBar(dbcur, table, id, stock_symbol, bar_update, bar_add, badcount, **barX):
+def DBAddNewBar(dbcur, search, table, id, stock_symbol, bar_update, bar_add, badcount, **barX):
     # Need to see if the bar already exists in database
     # Need to expand this for situations where it finds multiple for same date....
     bardt = (barX['datetime'])//1000
@@ -36,7 +36,10 @@ def DBAddNewBar(dbcur, table, id, stock_symbol, bar_update, bar_add, badcount, *
 
     try:
         bar_add += 1
-        dbcur.execute("INSERT INTO {} (stock_id, datetime, tradingday, open, high, low, close, volume, hist_source) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 1);".format(table), (id, bardt, bardate, barX['open'], barX['high'], barX['low'], barX['close'], barX['volume']))
+        if search == 'daily':
+            dbcur.execute("INSERT INTO {} (stock_id, datetime, tradingday, open, high, low, close, volume, hist_source) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 1);".format(table), (id, bardt, bardate, barX['open'], barX['high'], barX['low'], barX['close'], barX['volume']))
+        else:
+            dbcur.execute("INSERT INTO {} (stock_id, datetime, tradingday, tradingtime, open, high, low, close, volume, hist_source) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, 1);".format(table), (id, bardt, bardate, bartime, barX['open'], barX['high'], barX['low'], barX['close'], barX['volume']))
     except Exception as e:
 #        badcount += 1
         err.PrintException(stock_symbol, error_type = 'db_fail')

@@ -20,3 +20,1184 @@ EXCEPTION IN (/home/media/repos/stockbot/utilities/dbutils.py, LINE 29 "dbcur.ex
 LINE 1: SELECT count(*) FROM 'prices_daily' where stock_id = 2688 an...
                              ^
 
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): column "prices_daily" of relation "stocks" does not exist
+LINE 1: UPDATE stocks SET prices_daily = 0 where id = 5092;
+                          ^
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 183 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): current transaction is aborted, commands ignored until end of transaction block
+
+EXCEPTION IN (/home/media/repos/stockbot/price_data_update.py, LINE 182 "dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtbl[d]), (chunk, id))"): column "prices_daily" of relation "stocks" does not exist
+LINE 1: UPDATE stocks SET prices_daily = 0 where id = 5092;
+                          ^
+
+EXCEPTION IN (/home/media/repos/stockbot/utilities/tda_actions.py, LINE 14 "price_data = c.get_price_history(stock_symbol, frequency=freq, frequency_type=freqtype, start_datetime=hist_start, end_datetime=hist_end)"): expected type "FrequencyType", got type "str". Did you mean tda.client.base.FrequencyType.DAILY? (initialize with enforce_enums=False to disable this checking)
+EXCEPTION IN (/home/media/repos/stockbot/utilities/tda_actions.py, LINE 16 "price_data = c.get_price_history(stock_symbol, frequency=freq, frequency_type=freqtype, start_datetime=hist_start, end_datetime=hist_end)"): expected type "FrequencyType", got type "str". (initialize with enforce_enums=False to disable this checking)
+EXCEPTION IN (/home/media/repos/stockbot/utilities/tda_actions.py, LINE 16 "price_data = c.get_price_history(stock_symbol, frequency=freq, frequency_type=freqtype, start_datetime=hist_start, end_datetime=hist_end)"): expected type "FrequencyType", got type "str". (initialize with enforce_enums=False to disable this checking)
+EXCEPTION IN (/home/media/repos/stockbot/utilities/tda_actions.py, LINE 17 "assert price_data.status_code == 200, price_data.raise_for_status()"): Client error '400 ' for url 'https://api.tdameritrade.com/v1/marketdata/AGOV/pricehistory?apikey=6VR4CQRK1K9RG85OPM5HZS8XP4IQAXOL%40AMER.OAUTHAP&frequencyType=daily&frequency=1&startDate=1648049215721&endDate=1648135615721'
+For more information check: https://httpstatuses.com/400
+EXCEPTION IN (/home/media/repos/stockbot/utilities/tda_actions.py, LINE 16 "price_data = c.get_price_history(stock_symbol, frequency=client.DAILY, frequency_type=client.DAILY, start_datetime=hist_start, end_datetime=hist_end)"): module 'tda.client' has no attribute 'DAILY'
+EXCEPTION IN (/home/media/repos/stockbot/utilities/tda_actions.py, LINE 16 "price_data = c.get_price_history(stock_symbol, frequency='DAILY', frequency_type='DAILY', start_datetime=hist_start, end_datetime=hist_end)"): expected type "FrequencyType", got type "str". Did you mean tda.client.base.FrequencyType.DAILY? (initialize with enforce_enums=False to disable this checking)

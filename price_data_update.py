@@ -97,38 +97,41 @@ with dbconn:
     for value in range(0, lct):
         qtime_list.append(0)
 
-    milli_1dy = startmilli - 86400
-    milli_1wk = startmilli - 605000
+    milli_1d = startmilli - 86400
+    milli_45d = startmilli - 3900000
     milli_1mo = startmilli - 2666666
-    milli_3mo = startmilli - 8000000
-    milli_6mo = startmilli - 16000000
+    milli_9mo = startmilli - 16000000
     milli_1yr = startmilli - 32000000
     milli_30yr = startmilli - 946000000
-#    searches = ['daily','1min','5min','15min','30min']
-    searches = ['daily']
-    searchest = ['table_daily']
-    searchestm = ['table_daily_milli']
+
+    # searches = ['daily', '1min', '5min', '15min', '30min', '1hr', '2hr', '4hr']
+    searches = ['daily', '1min', '5min', '15min', '30min']
+    searchtbl = ['prices_daily', 'prices_1min', 'prices_5min', 'prices_15min', 'prices_30min', 'prices_1hr', 'prices_2hr', 'prices_4hr']
+    searcht = ['table_daily', 'table_1min', 'table_5min', 'table_15min', 'table_30min', 'table_1hr', 'table_2hr', 'table_4hr']
+    searchtm = ['table_daily_milli', 'table_1min_milli', 'table_5min_milli', 'table_15min_milli', 'table_30min_milli', 'table_1hr_milli', 'table_2hr_milli', 'table_4r_milli']
+    searchs1 = [milli_1yr, milli_1d, milli_1mo, milli_1mo, milli_1mo]
+    searchs2 = [milli_30yr, milli_45d, milli_9mo, milli_9mo, milli_9mo]
+    # freq = ['DAILY', 'EVERY_MINUTE', 'EVERY_FIVE_MINUTES', 'EVERY_FIFTEEN_MINUTES', 'EVERY_THIRTY_MINUTES']
+    # freqtype = ['DAILY', 'MINUTE', 'MINUTE', 'MINUTE', 'MINUTE']
 
     for chunk in range (0, 2):
         d = -1
         for search in searches:
             d += 1
-            # Grab current symbols in Stock Table from database
-            if search == 'daily':
-                try:
-            #   Table_daily_milli  ***********************************************!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    dbcur.execute(
-                        "SELECT id, symbol, name, {}, {}, status FROM stocks;".format(searchest[d], searchestm[d]))
-                    rows = dbcur.fetchall()
-                    stored_symbols = [row['symbol'] for row in rows]
-                    stock_total = len(stored_symbols)
-                except Exception as e:
-                    badcount += 1
-                    err.PrintException(stock_symbol, "Setup")
-                    exit()
-
             stock_num = 0
-            
+
+            # Grab current symbols in Stock Table from database
+            try:
+                dbcur.execute(
+                    "SELECT id, symbol, name, {}, {}, status FROM stocks;".format(searcht[d], searchtm[d]))
+                rows = dbcur.fetchall()
+                stored_symbols = [row['symbol'] for row in rows]
+                stock_total = len(stored_symbols)
+            except Exception as e:
+                badcount += 1
+                err.PrintException(stock_symbol, "Setup")
+                exit()
+
             # Read all Problem Symbols into a variable to avoid
             with open(conf.ProblemFile, 'r') as f:
                 bad_symbols = f.read().split("\n")
@@ -159,19 +162,19 @@ with dbconn:
                 period_milli = cur_id[4]
                 # (If daily milli is blank, set it to something)
                 if not period_milli:
-                    period_milli = milli_1dy
+                    period_milli = searchs1[d]
 
-                daily_updated = time.strftime('%Y-%m-%d', time.localtime(period_milli))
-                daily_state = cur_id[3]
+                period_updated = time.strftime('%Y-%m-%d', time.localtime(period_milli))
+                period_state = cur_id[3]
                 if chunk == 0:
-                    if ((daily_updated == today_date) and (daily_state == 1)):
+                    if ((period_updated == today_date) and (period_state == 1)):
                         yskipcount += 1
-                        print(f"Current Year Update: {stock_num}/{stock_total} - Skipping {stock_symbol} because it seems to have already been updated today.")
+                        print(f"Current limited {searches[d]} update: {stock_num}/{stock_total} - Skipping {stock_symbol} because it seems to have already been updated today.")
                         continue
                 else:
-                    if ((daily_updated == today_date) and (daily_state == 2)):
+                    if ((period_updated == today_date) and (period_state == 2)):
                         fskipcount += 1
-                        print(f"Full Update: {stock_num}/{stock_total} - Skipping {stock_symbol} because it seems to have already been updated today.")
+                        print(f"Full {searches[d]} update: {stock_num}/{stock_total} - Skipping {stock_symbol} because it seems to have already been updated today.")
                         continue
 
                 id = cur_id[0]
@@ -179,7 +182,7 @@ with dbconn:
                 dbasset_num += 1
 
                 try:
-                    dbcur.execute("UPDATE stocks SET table_daily = %s where id = %s;", (chunk, id))  
+                    dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searcht[d]), (chunk, id))  
                 except Exception as e:
                     badcount += 1
                     err.PrintException(stock_symbol, "Setup")
@@ -208,80 +211,81 @@ with dbconn:
                     time.sleep(sleeptime)
                 ##################################################################################################################
 
-        #        cur.execute("SELECT datetime FROM prices_daily where stock_id = %s;", (id,))
+        #        cur.execute("SELECT datetime FROM {} where stock_id = %s;", (id,))
         #        price_rows = cur.fetchall()
         #        price_count = len(price_rows)
 
-                print(f"{stock_num}/{stock_total} -  {chunk} -Retrieving New Daily Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
-                dbcur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
+                print(f"{stock_num}/{stock_total} -  {chunk} -Retrieving New {searches[d]} Stock Prices for {stock_symbol}.  Starting at {dbasset_starttime}")
+                dbcur.execute("SELECT COUNT(datetime) FROM {} where stock_id = %s and hist_source = 0;".format(searchtbl[d]), (id,))
                 result = dbcur.fetchall()
                 price_count_live = result[0][0]
                 if price_count_live > 0:
-                    dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
+                    dbcur.execute("SELECT MIN(datetime) AS minimum FROM {} where stock_id = %s and hist_source = 0;".format(searchtbl[d]), (id,))
                     result = dbcur.fetchall()
                     price_mindate_live = result[0][0]
-                    dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_daily where stock_id = %s and hist_source = 0;", (id,))
+                    dbcur.execute("SELECT MAX(datetime) AS maximum FROM {} where stock_id = %s and hist_source = 0;".format(searchtbl[d]), (id,))
                     result = dbcur.fetchall()
                     price_maxdate_live = result[0][0]
-                    print(f"Most recent Live Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_live))}   {price_count} total price records")
-                    print(f"Oldest Live Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_live))}")
+                    print(f"Most recent Live {searches[d]} Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_live))}   {price_count} total price records")
+                    print(f"Oldest Live {searches[d]} Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_live))}")
                     try:
-                        dbcur.execute("DELETE FROM prices_daily where stock_id = %s and hist_source = 0 and datetime BETWEEN %s and %s;", (id, price_mindate_live, price_maxdate_live))
+                        dbcur.execute("DELETE FROM {} where stock_id = %s and hist_source = 0 and datetime BETWEEN %s and %s;".format(searchtbl[d]), (id, price_mindate_live, price_maxdate_live))
                         print(f"   ->>>>  All live data removed.")
                     except Exception as e:
                         badcount += 1
                         err.PrintException(stock_symbol, "Setup")
-                dbcur.execute("SELECT COUNT(datetime) FROM prices_daily where stock_id = %s;", (id,))
+                dbcur.execute("SELECT COUNT(datetime) FROM {} where stock_id = %s;".format(searchtbl[d]), (id,))
                 result = dbcur.fetchall()
                 price_count = result[0][0]
                 if price_count > 0:
-                    dbcur.execute("SELECT MAX(datetime) AS maximum FROM prices_daily where stock_id = %s and hist_source = 1;", (id,))
+                    dbcur.execute("SELECT MAX(datetime) AS maximum FROM {} where stock_id = %s and hist_source = 1;".format(searchtbl[d]), (id,))
                     result = dbcur.fetchall()
                     price_maxdate_hist = result[0][0]
-                    dbcur.execute("SELECT MIN(datetime) AS minimum FROM prices_daily where stock_id = %s and hist_source = 1;", (id,))
+                    dbcur.execute("SELECT MIN(datetime) AS minimum FROM {} where stock_id = %s and hist_source = 1;".format(searchtbl[d]), (id,))
                     result = dbcur.fetchall()
                     price_mindate_hist = result[0][0]
-                    print(f"Most recent Historical Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_hist))}   {price_count} total price records")
-                    print(f"Oldest Historical Daily Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_hist))}")
+                    print(f"Most recent Historical {searches[d]} Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_maxdate_hist))}   {price_count} total price records")
+                    print(f"Oldest Historical {searches[d]} Price data found in stockbot database: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(price_mindate_hist))}")
 
     # **************************************
                     if chunk == 0:
-                        srewind = round((query_time - price_maxdate_hist)/86400)
+                        srewind = round((query_time - price_maxdate_hist)/86400) 
                         erewind = 0
                     else:
-                        srewind = round((query_time - milli_30yr)/86400)
+                        srewind = round((query_time - searchs2[d])/86400)
                         erewind = round((query_time - price_mindate_hist)/86400)
                 else:
-                    print(f"No Daily Price data found in stockbot database")
-                    srewind = round((query_time - milli_1yr)/86400)
+                    print(f"No {searches[d]} price data found in stockbot database")
+                    srewind = round((query_time - searchs1[d])/86400)
                     erewind = 0
                 hist_start = datetime.now(timezone.utc) - timedelta(days=srewind)
                 hist_end = datetime.now(timezone.utc) - timedelta(days=erewind)
                 print(f"Pulling data from {hist_start} to {hist_end}")
 
                 ###################################################
-                # Last X years of daily price data for stock  #
+                # Last X time period of price data for stock  #
                 ###################################################
-                prices = td.QueryTDA(c, tdaquery, stock_symbol, hist_start, hist_end, badcount)
+                prices = td.QueryTDA(c, search, stock_symbol, hist_start, hist_end, badcount)
+
                 p1 = 'candles'
                 p2 = prices[p1]
                 if (prices['empty'] == True):
                     print(f"No new data for stock {stock_symbol}")
                     continue
                 print(
-                    f"- Number of new daily price records found for {stock_symbol} from TDA: {len(p2)-1}")
+                    f"- Number of new {searches[d]} price records found for {stock_symbol} from TDA: {len(p2)-1}")
                 fromdate = time.localtime((prices['candles'][0]['datetime'])/1000)
                 todate = time.localtime(
                     (prices['candles'][(len(prices['candles'])-1)]['datetime'])/1000)
                 print(
-                    f"- TDA Price Data Date Range from: {time.strftime('%Y-%m-%d %H:%M:%S', fromdate)} to {time.strftime('%Y-%m-%d %H:%M:%S', todate)}")
+                    f"- TDA {searches[d]} Price Data Date Range from: {time.strftime('%Y-%m-%d %H:%M:%S', fromdate)} to {time.strftime('%Y-%m-%d %H:%M:%S', todate)}")
 
                 bar_skip = 0
                 bar_update = 0
                 bar_add = 0
                 for p5bar in tqdm(range(0, (len(prices['candles']))), ncols=100, ascii=True, desc=stock_symbol):
                     barX = (p2[p5bar])
-                    dbu.DBAddNewBar(dbcur, tname, id, stock_symbol, bar_update, bar_add, badcount, **barX)
+                    dbu.DBAddNewBar(dbcur, search, searchtbl[d], id, stock_symbol, bar_update, bar_add, badcount, **barX)
 
                 print(
                     f"Bars skipped: {bar_skip}    Updated: {bar_update}    Added: {bar_add}")
@@ -289,7 +293,8 @@ with dbconn:
                 try:
                     # table_daily_milli reference?  ************************************************  !!!!!!!!!!!!!!!!!!!!!!!
                     dbcur.execute(
-                        "UPDATE stocks SET table_daily = %s, table_daily_milli = %s where id = %s;", (chunk+1, query_time, id))
+                        "UPDATE stocks SET {} = %s, {} = %s where id = %s;".format(searcht[d], searchtm[d]), (chunk+1, query_time, id))
+                    # dbcur.execute("UPDATE stocks SET {} = %s where id = %s;".format(searchtm[d]), (query_time, id))
                 except Exception as e:
                     badcount += 1
                     err.PrintException(stock_symbol, "Setup")
@@ -301,7 +306,7 @@ with dbconn:
                 endtime_dbasset = (b.current_milli_time()/1000)
                 dbasset_endtime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(endtime_dbasset))
                 answer = str(round((endtime_dbasset - starttime_dbasset), 2))
-                print(f"{dbasset_endtime} - Elapsed Time for {stock_symbol} Daily Price Update: {answer} seconds")
+                print(f"{dbasset_endtime} - Elapsed Time for {stock_symbol} {searches[d]} Price Update: {answer} seconds")
                 print(f"\n")
 
 # Commit changes to DB
