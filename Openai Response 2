@@ -1,0 +1,94 @@
+# Certainly! Here's an example of a Python program that grabs historical price data for stocks, writes it to a PostgreSQL database, performs technical indicator analysis, and outputs the results:
+# Make sure to replace the placeholders with your actual PostgreSQL database credentials. Additionally, you may need to install the required libraries, including psycopg2, pandas, pandas_datareader, yfinance, and talib.
+
+-----
+
+import psycopg2
+import pandas as pd
+from pandas_datareader import data as pdr
+import yfinance as yf
+import talib
+
+# Set up the PostgreSQL database connection details
+DB_HOST = '192.168.1.88'
+DB_NAME = 'your_database_name'
+DB_USER = 'your_username'
+DB_PASSWORD = 'your_password'
+
+# Set up the Yahoo Finance API
+yf.pdr_override()
+
+# Set up the database connection
+def create_connection():
+    try:
+        conn = psycopg2.connect(host=DB_HOST, database=DB_NAME, user=DB_USER, password=DB_PASSWORD)
+        return conn
+    except psycopg2.Error as e:
+        print('Error connecting to PostgreSQL database:', e)
+        return None
+
+# Grab historical price data for a stock symbol and write it to the database
+def grab_historical_data(conn, symbol):
+    try:
+        # Fetch historical data using Yahoo Finance API
+        df = pdr.get_data_yahoo(symbol)
+        df.reset_index(inplace=True)
+
+        # Write data to the database
+        cursor = conn.cursor()
+        for _, row in df.iterrows():
+            query = "INSERT INTO stock_data (symbol, date, price) VALUES (%s, %s, %s)"
+            values = (symbol, row['Date'], row['Close'])
+            cursor.execute(query, values)
+        conn.commit()
+        cursor.close()
+        print('Historical price data for', symbol, 'inserted successfully.')
+    except Exception as e:
+        print('Error inserting historical price data for', symbol, ':', e)
+
+# Read data from the database and perform technical indicator analysis
+def analyze_technical_indicators(conn):
+    try:
+        # Read data from the database
+        cursor = conn.cursor()
+        query = "SELECT symbol, date, price FROM stock_data"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        cursor.close()
+
+        # Convert data to a pandas DataFrame
+        df = pd.DataFrame(rows, columns=['symbol', 'date', 'price'])
+
+        # Calculate technical indicators using TA-Lib library
+        df['sma'] = talib.SMA(df['price'], timeperiod=10)
+        df['rsi'] = talib.RSI(df['price'], timeperiod=14)
+
+        # Output the results
+        for _, row in df.iterrows():
+            if row['price'] > row['sma'] and row['rsi'] > 70:
+                print('Symbol:', row['symbol'])
+                print('Date:', row['date'])
+                print('Price:', row['price'])
+                print('Technical Indicator Triggered: Overbought\n')
+    except Exception as e:
+        print('Error analyzing technical indicators:', e)
+
+# Main program
+def main():
+    # Connect to the PostgreSQL database
+    conn = create_connection()
+    if conn is None:
+        return
+
+    # Grab historical price data and write it to the database
+    grab_historical_data(conn, 'AAPL')
+    grab_historical_data(conn, 'GOOGL')
+
+    # Analyze technical indicators and output the results
+    analyze_technical_indicators(conn)
+
+    # Close the database connection
+    conn.close()
+
+if __name__ == '__main__':
+    main()
