@@ -1,0 +1,109 @@
+import os
+import psycopg2
+from td.client import TDClient
+
+# TD Ameritrade API credentials
+TD_API_KEY = "YOUR_TD_API_KEY"
+TD_REDIRECT_URI = "https://localhost"
+TD_ACCOUNT_ID = "YOUR_TD_ACCOUNT_ID"
+
+# PostgreSQL database connection details
+DB_HOST = "192.168.1.88"
+DB_NAME = "daily_stock_data"
+DB_USER = "your_username"
+DB_PASSWORD = "your_password"
+
+def connect_to_database():
+    conn = psycopg2.connect(
+        host=DB_HOST,
+        database=DB_NAME,
+        user=DB_USER,
+        password=DB_PASSWORD
+    )
+    return conn
+
+def create_stock_table(conn):
+    cursor = conn.cursor()
+    create_table_query = '''
+        CREATE TABLE IF NOT EXISTS stock_activity (
+            symbol VARCHAR(10) PRIMARY KEY,
+            date DATE,
+            open FLOAT,
+            high FLOAT,
+            low FLOAT,
+            close FLOAT,
+            volume INTEGER
+        );
+    '''
+    cursor.execute(create_table_query)
+    conn.commit()
+
+def insert_stock_activity(conn, symbol, date, open_price, high_price, low_price, close_price, volume):
+    cursor = conn.cursor()
+    insert_query = '''
+        INSERT INTO stock_activity (symbol, date, open, high, low, close, volume)
+        VALUES (%s, %s, %s, %s, %s, %s, %s);
+    '''
+    values = (symbol, date, open_price, high_price, low_price, close_price, volume)
+    cursor.execute(insert_query, values)
+    conn.commit()
+
+def get_daily_stock_activity():
+    client = TDClient(
+        client_id=TD_API_KEY,
+        redirect_uri=TD_REDIRECT_URI,
+        account_id=TD_ACCOUNT_ID
+    )
+    client.login()
+
+    # Get all current stock symbols
+    response = client.search_instruments(
+        symbol="",
+        projection="symbol-regex"
+    )
+    symbols = [instrument["symbol"] for instrument in response.json()]
+
+    # Gather daily stock activity for each symbol
+    for symbol in symbols:
+        response = client.get_price_history(
+            symbol=symbol,
+            period_type="day",
+            frequency_type="daily",
+            frequency=1
+        )
+        candles = response.json()["candles"]
+
+        for candle in candles:
+            date = candle["datetime"][:10]
+            open_price = candle["open"]
+            high_price = candle["high"]
+            low_price = candle["low"]
+            close_price = candle["close"]
+            volume = candle["volume"]
+
+            # Insert the stock activity into the database
+            insert_stock_activity(
+                conn,
+                symbol,
+                date,
+                open_price,
+                high_price,
+                low_price,
+                close_price,
+                volume
+            )
+
+    client.logout()
+
+if __name__ == "__main__":
+    # Connect to the database
+    conn = connect_to_database()
+
+    # Create the stock table if it doesn't exist
+    create_stock_table(conn)
+
+    # Gather daily stock activity and insert into the database
+    get_daily_stock_activity()
+
+    # Close the database connection
+    conn.close()
