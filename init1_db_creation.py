@@ -19,7 +19,7 @@ class NewTables:
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
         # Drop old tables if they exist in db from conf.dbname
-        print(f"Deleting all tables.")
+        print(f"Deleting all tables!")
         cur.execute("DROP TABLE IF EXISTS fundamentals;")
         cur.execute("DROP TABLE IF EXISTS prices_daily;")
         cur.execute("DROP TABLE IF EXISTS prices_1min;")
