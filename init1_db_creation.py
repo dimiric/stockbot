@@ -2,7 +2,7 @@ import psycopg2
 import psycopg2.extras
 import settings.config as conf
 
-# This file creates the necessary tables in Postgresql
+# This file creates the necessary tables in Postgresql !!!!
 
 class NewTables:
     #Establish Postgresql connection based on settings in config.py
