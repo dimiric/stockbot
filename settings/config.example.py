@@ -12,12 +12,12 @@ dbport = '5432'
 dbsslmode = 'require'
 
 #Alpaca specific settings
-alp_apikey = 'your alpaca key DHHK'
-alp_secret = 'Your Alpaca Secret 9GotvKTSqao3Il7hgeqbF'
+alp_apikey = 'your alpaca key'
+alp_secret = 'Your Alpaca Secret'
 alp_base_url = 'https://api.alpaca.markets'
 
 #TD Ameritrade specific settings
-#tda_apikey = '6VFR2GQRK7K9RG85OPD5SJHD45DQAXOL@AMER.OAUTHAP'  Didn't need this
+#tda_apikey = 'xxxxxxxxxxxxxxxxxxxxxL@AMER.OAUTHAP'  Didn't need this
 tda_apikey = 'TD Ameritrade api from my apps in dev site'
 tda_token_path = 'settings/token'
 tda_redirect_uri = 'https://localhost'
